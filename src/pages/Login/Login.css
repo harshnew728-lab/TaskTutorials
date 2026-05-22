@@ -1,0 +1,366 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.login-page{
+
+  min-height:100vh;
+
+  padding:40px 14px 24px;
+
+  background:var(--bg-color);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* CENTER SECTION */
+
+.center-logo-section{
+
+  text-align:center;
+
+  margin-top:10px;
+
+  margin-bottom:52px;
+}
+
+.big-logo{
+
+  width:80px;
+  height:80px;
+
+  margin:auto;
+
+  border-radius:50%;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  box-shadow:0 4px 14px rgba(0,0,0,0.12);
+}
+
+.big-logo img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.center-logo-section h1{
+
+  margin-top:14px;
+
+  font-size:clamp(26px, 5vw, 38px);
+
+  color:var(--text-dark);
+}
+
+.center-logo-section p{
+
+  margin-top:8px;
+
+  font-size:clamp(13px, 2vw, 16px);
+
+  color:var(--text-light);
+}
+
+/* LOGIN CARD */
+
+.login-card{
+
+  width:100%;
+  max-width:600px;
+
+  padding:20px;
+
+  border-radius:24px;
+
+  background:var(--card-bg);
+
+  box-shadow:0 4px 18px var(--shadow-color);
+}
+
+/* LABELS */
+
+.login-card label{
+
+  display:block;
+
+  margin:18px 0 10px;
+
+  font-size:clamp(14px, 2vw, 15px);
+
+  font-weight:600;
+
+  color:var(--text-dark);
+}
+
+/* INPUTS */
+
+.login-card input{
+
+  width:100%;
+  height:52px;
+
+  padding:0 18px;
+  padding-right:55px;
+
+  border:1px solid var(--border-color);
+  border-radius:14px;
+
+  outline:none;
+
+  font-size:clamp(13px, 2vw, 14px);
+
+  background:var(--card-bg);
+
+  color:var(--text-dark);
+}
+
+.login-card input:focus{
+
+  border-color:var(--primary-color);
+}
+
+/* PASSWORD */
+
+.password-box{
+
+  position:relative;
+}
+
+.show-btn{
+
+  position:absolute;
+
+  top:50%;
+  right:18px;
+
+  transform:translateY(-50%);
+
+  border:none;
+  background:none;
+
+  cursor:pointer;
+
+  color:var(--text-light);
+
+  font-size:18px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ERROR */
+
+.error-text{
+
+  margin-top:6px;
+
+  font-size:13px;
+
+  color:red;
+}
+
+/* FORGOT PASSWORD */
+
+.forgot-password{
+
+  margin-top:16px;
+
+  text-align:right;
+
+  font-size:clamp(13px, 2vw, 15px);
+
+  font-weight:600;
+
+  color:var(--primary-color);
+
+  cursor:pointer;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn{
+
+  width:100%;
+  height:52px;
+
+  margin-top:28px;
+
+  border:none;
+  border-radius:14px;
+
+  background:var(--primary-color);
+
+  color:white;
+
+  font-size:clamp(14px, 2vw, 15px);
+
+  font-weight:600;
+
+  cursor:pointer;
+}
+
+.login-btn:hover{
+
+  opacity:0.95;
+}
+
+/* DIVIDER */
+
+.divider{
+
+  margin-top:34px;
+
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  font-size:12px;
+  font-weight:600;
+
+  color:var(--text-light);
+}
+
+.divider::before,
+.divider::after{
+
+  content:"";
+
+  flex:1;
+
+  height:1px;
+
+  background:var(--border-color);
+}
+
+/* SOCIAL BUTTONS */
+
+.social-buttons{
+
+  margin-top:24px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.social-btn{
+
+  width:80%;
+
+  padding:14px 24px;
+
+  border:1px solid var(--border-color);
+  border-radius:14px;
+
+  background:var(--card-bg);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  cursor:pointer;
+
+  font-size:clamp(13px, 2vw, 14px);
+
+  font-weight:600;
+
+  color:var(--text-dark);
+}
+
+.social-btn img{
+
+  width:20px;
+  height:20px;
+}
+
+/* SIGNUP */
+
+.signup-text{
+
+  margin-top:30px;
+
+  text-align:center;
+
+  font-size:clamp(14px, 2vw, 15px);
+
+  color:var(--text-dark);
+}
+
+.signup-text a{
+
+  text-decoration:none;
+}
+
+.signup-text span{
+
+  color:var(--primary-color);
+
+  font-weight:700;
+}
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+  .login-page{
+
+    padding-top:32px;
+
+    padding-bottom:20px;
+  }
+
+  .center-logo-section{
+
+    margin-top:0;
+
+    margin-bottom:42px;
+  }
+
+  .big-logo{
+
+    width:72px;
+    height:72px;
+  }
+
+  .center-logo-section h1{
+
+    margin-top:12px;
+  }
+
+  .center-logo-section p{
+
+    margin-top:6px;
+  }
+
+  .login-card{
+
+    padding:18px;
+  }
+
+  .social-btn{
+
+    width:100%;
+  }
+
+}
