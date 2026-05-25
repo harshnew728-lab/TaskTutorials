@@ -16,6 +16,7 @@ import Live from "../pages/Live/Live";
 
 import ProtectedRoute
   from "./ProtectedRoute";
+import ScrollToTop from "../components/ScrollToTop";
 
 // INNER ROUTES COMPONENT
 
@@ -142,9 +143,10 @@ function AppContent() {
 function AppRoutes() {
 
   return (
+    
 
     <BrowserRouter>
-
+    <ScrollToTop/>
       <AppContent />
 
     </BrowserRouter>

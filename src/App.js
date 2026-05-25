@@ -1,5 +1,5 @@
 import AppRoutes from "./routes/AppRoutes";
-
+import ScrollToTop from "./components/ScrollToTop";
 import {
   ToastContainer
 } from "react-toastify";

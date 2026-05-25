@@ -1,16 +1,14 @@
 import "./Live.css";
 
 import Navbar from "../../components/Navbar/Navbar";
-
 import Filter from "../../components/Filter/Filter";
 
 import { useNavigate } from "react-router-dom";
 
-import { useState } from "react";
-
-// import {
-//   HiOutlineMenu
-// } from "react-icons/hi";
+import {
+  useState,
+  useRef
+} from "react";
 
 import {
   FiVideo,
@@ -20,6 +18,8 @@ import {
 function Live() {
 
   const navigate = useNavigate();
+
+  const sliderRef = useRef(null);
 
   const [activeSubject, setActiveSubject] =
     useState("All");
@@ -110,8 +110,8 @@ function Live() {
       teacher: "Karan Sir",
       time: "10:00 AM",
       topic: "Thermodynamics"
-    }
-
+    },
+     
   ];
 
   // TIME CONVERTER
@@ -233,10 +233,10 @@ function Live() {
       <div className="top-header">
 
         <img
-  src="https://tse1.mm.bing.net/th/id/OIP.qwylZspe0tt884RHXmhfWgHaHa?pid=Api&P=0&h=180"
-  alt="TT Logo"
-  className="tt-logo"
-/>
+          src="https://tse1.mm.bing.net/th/id/OIP.qwylZspe0tt884RHXmhfWgHaHa?pid=Api&P=0&h=180"
+          alt="TT Logo"
+          className="tt-logo"
+        />
 
         <h2>TASK TUTORIALS</h2>
 
@@ -327,7 +327,11 @@ function Live() {
 
       {/* CLASSES */}
 
-      <div className="classes-grid">
+      <div
+        key={`${sortByTime}-${activeSubject}`}
+        className="classes-grid"
+        ref={sliderRef}
+      >
 
         {
           filteredClasses.length > 0 ? (
