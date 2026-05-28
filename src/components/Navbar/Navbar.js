@@ -62,7 +62,7 @@ function Navbar() {
 
         </div>
 
-        <p>Videos</p>
+        <p>Recordings</p>
 
       </div>
 

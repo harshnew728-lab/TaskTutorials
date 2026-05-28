@@ -14,6 +14,7 @@ import {
   FiVideo,
   FiClock
 } from "react-icons/fi";
+import SidebarButton from "../../components/SidebarButton/SidebarButton";
 
 function Live() {
 
@@ -232,11 +233,11 @@ function Live() {
 
       <div className="top-header">
 
-        <img
-          src="https://tse1.mm.bing.net/th/id/OIP.qwylZspe0tt884RHXmhfWgHaHa?pid=Api&P=0&h=180"
-          alt="TT Logo"
-          className="tt-logo"
-        />
+        <div className="sidebar-wrapper">
+
+       <SidebarButton />
+
+       </div>
 
         <h2>TASK TUTORIALS</h2>
 

@@ -24,6 +24,7 @@ import {
 import {
   toast
 } from "react-toastify";
+import SidebarButton from "../../components/SidebarButton/SidebarButton";
 
 function Profile() {
 
@@ -111,11 +112,11 @@ function Profile() {
 
         {/* TT LOGO */}
 
-        <img
-          src="https://tse1.mm.bing.net/th/id/OIP.qwylZspe0tt884RHXmhfWgHaHa?pid=Api&P=0&h=180"
-          alt="TT Logo"
-          className="tt-logo"
-        />
+        <div className="sidebar-wrapper">
+
+  <SidebarButton />
+
+</div>
 
         <h2>TASK TUTORIALS</h2>
 

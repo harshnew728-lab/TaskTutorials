@@ -412,3 +412,19 @@
   }
 
 }
+
+.sidebar-wrapper{
+  position:relative;
+
+  width:42px;
+  height:42px;
+}
+
+/* override sidebar button */
+
+.sidebar-wrapper .sidebar-toggle{
+  position:relative;
+
+  top:0;
+  left:0;
+}

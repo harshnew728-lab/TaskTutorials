@@ -1,0 +1,359 @@
+{
+  "meeting": {
+    "uuid": "z8KpQx91LmNoP2",
+    "id": 98277122341,
+    "host_id": "host_PHY_22",
+    "topic": "JEE Physics - Current Electricity",
+    "type": 2,
+    "start_time": "2026-05-26T10:00:00Z",
+    "duration": 60,
+    "timezone": "Asia/Kolkata"
+  },
+
+  "participants": [
+    {
+      "id": "p001",
+      "name": "Aarav Sharma",
+      "user_email": "aarav.sharma@example.com",
+      "join_time": "2026-05-26T10:00:12Z",
+      "leave_time": "2026-05-26T10:18:44Z",
+      "duration": 18,
+      "status": "left"
+    },
+    {
+      "id": "p002",
+      "name": "Aarav Sharma",
+      "user_email": "aarav.sharma@example.com",
+      "join_time": "2026-05-26T10:19:30Z",
+      "leave_time": "2026-05-26T10:59:40Z",
+      "duration": 40,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p003",
+      "name": "Priya Verma",
+      "user_email": "priya.verma@example.com",
+      "join_time": "2026-05-26T10:01:11Z",
+      "leave_time": "2026-05-26T10:58:58Z",
+      "duration": 57,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p004",
+      "name": "Rohan Mehta",
+      "user_email": "rohan.mehta@example.com",
+      "join_time": "2026-05-26T10:16:42Z",
+      "leave_time": "2026-05-26T10:32:05Z",
+      "duration": 15,
+      "status": "left"
+    },
+    {
+      "id": "p005",
+      "name": "Rohan Mehta",
+      "user_email": "rohan.mehta@example.com",
+      "join_time": "2026-05-26T10:34:00Z",
+      "leave_time": "2026-05-26T10:45:10Z",
+      "duration": 11,
+      "status": "left"
+    },
+
+    {
+      "id": "p006",
+      "name": "Sneha Kapoor",
+      "user_email": "sneha.kapoor@example.com",
+      "join_time": "2026-05-26T09:59:40Z",
+      "leave_time": "2026-05-26T11:00:02Z",
+      "duration": 60,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p007",
+      "name": "Aditya Singh",
+      "user_email": "aditya.singh@example.com",
+      "join_time": "2026-05-26T10:07:12Z",
+      "leave_time": "2026-05-26T10:54:50Z",
+      "duration": 47,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p008",
+      "name": "Kunal Jain",
+      "user_email": "kunal.jain@example.com",
+      "join_time": "2026-05-26T10:00:52Z",
+      "leave_time": "2026-05-26T10:21:00Z",
+      "duration": 20,
+      "status": "left"
+    },
+    {
+      "id": "p009",
+      "name": "Kunal Jain",
+      "user_email": "kunal.jain@example.com",
+      "join_time": "2026-05-26T10:21:55Z",
+      "leave_time": "2026-05-26T10:57:10Z",
+      "duration": 35,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p010",
+      "name": "Ishita Agarwal",
+      "user_email": "ishita.agarwal@example.com",
+      "join_time": "2026-05-26T10:13:10Z",
+      "leave_time": "2026-05-26T10:58:49Z",
+      "duration": 45,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p011",
+      "name": "Harsh Raj",
+      "user_email": "harsh.raj@example.com",
+      "join_time": "2026-05-26T10:00:01Z",
+      "leave_time": "2026-05-26T10:59:59Z",
+      "duration": 59,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p012",
+      "name": "Nandini Rao",
+      "user_email": "nandini.rao@example.com",
+      "join_time": "2026-05-26T10:09:00Z",
+      "leave_time": "2026-05-26T10:38:15Z",
+      "duration": 29,
+      "status": "left"
+    },
+
+    {
+      "id": "p013",
+      "name": "Vivek Chauhan",
+      "user_email": "vivek.chauhan@example.com",
+      "join_time": "2026-05-26T10:01:41Z",
+      "leave_time": "2026-05-26T10:56:13Z",
+      "duration": 54,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p014",
+      "name": "Ananya Mishra",
+      "user_email": "ananya.mishra@example.com",
+      "join_time": "2026-05-26T10:05:11Z",
+      "leave_time": "2026-05-26T10:58:02Z",
+      "duration": 52,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p015",
+      "name": "Rahul Yadav",
+      "user_email": "rahul.yadav@example.com",
+      "join_time": "2026-05-26T10:26:12Z",
+      "leave_time": "2026-05-26T10:59:42Z",
+      "duration": 33,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p016",
+      "name": "Pooja Nair",
+      "user_email": "pooja.nair@example.com",
+      "join_time": "2026-05-26T10:00:40Z",
+      "leave_time": "2026-05-26T10:55:55Z",
+      "duration": 55,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p017",
+      "name": "Yash Patel",
+      "user_email": "yash.patel@example.com",
+      "join_time": "2026-05-26T10:11:18Z",
+      "leave_time": "2026-05-26T10:52:12Z",
+      "duration": 40,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p018",
+      "name": "Tanya Arora",
+      "user_email": "tanya.arora@example.com",
+      "join_time": "2026-05-26T09:58:59Z",
+      "leave_time": "2026-05-26T10:14:00Z",
+      "duration": 15,
+      "status": "left"
+    },
+    {
+      "id": "p019",
+      "name": "Tanya Arora",
+      "user_email": "tanya.arora@example.com",
+      "join_time": "2026-05-26T10:14:35Z",
+      "leave_time": "2026-05-26T11:00:05Z",
+      "duration": 45,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p020",
+      "name": "Dev Malhotra",
+      "user_email": "dev.malhotra@example.com",
+      "join_time": "2026-05-26T10:18:01Z",
+      "leave_time": "2026-05-26T10:44:12Z",
+      "duration": 26,
+      "status": "left"
+    },
+
+    {
+      "id": "p021",
+      "name": "Sakshi Gupta",
+      "user_email": "sakshi.gupta@example.com",
+      "join_time": "2026-05-26T10:02:45Z",
+      "leave_time": "2026-05-26T10:57:39Z",
+      "duration": 54,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p022",
+      "name": "Mohit Saini",
+      "user_email": "mohit.saini@example.com",
+      "join_time": "2026-05-26T10:07:05Z",
+      "leave_time": "2026-05-26T10:51:20Z",
+      "duration": 44,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p023",
+      "name": "Ritika Das",
+      "user_email": "ritika.das@example.com",
+      "join_time": "2026-05-26T10:00:18Z",
+      "leave_time": "2026-05-26T10:58:40Z",
+      "duration": 58,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p024",
+      "name": "Ayush Saxena",
+      "user_email": "ayush.saxena@example.com",
+      "join_time": "2026-05-26T10:29:04Z",
+      "leave_time": "2026-05-26T10:59:12Z",
+      "duration": 30,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p025",
+      "name": "Megha Joshi",
+      "user_email": "megha.joshi@example.com",
+      "join_time": "2026-05-26T10:03:00Z",
+      "leave_time": "2026-05-26T10:56:49Z",
+      "duration": 53,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p026",
+      "name": "Arjun Bhatia",
+      "user_email": "arjun.bhatia@example.com",
+      "join_time": "2026-05-26T10:14:15Z",
+      "leave_time": "2026-05-26T10:48:11Z",
+      "duration": 33,
+      "status": "left"
+    },
+
+    {
+      "id": "p027",
+      "name": "Neha Kulkarni",
+      "user_email": "neha.kulkarni@example.com",
+      "join_time": "2026-05-26T10:01:30Z",
+      "leave_time": "2026-05-26T10:20:00Z",
+      "duration": 18,
+      "status": "left"
+    },
+    {
+      "id": "p028",
+      "name": "Neha Kulkarni",
+      "user_email": "neha.kulkarni@example.com",
+      "join_time": "2026-05-26T10:20:45Z",
+      "leave_time": "2026-05-26T10:59:10Z",
+      "duration": 38,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p029",
+      "name": "Lakshya Rana",
+      "user_email": "lakshya.rana@example.com",
+      "join_time": "2026-05-26T10:09:03Z",
+      "leave_time": "2026-05-26T10:49:33Z",
+      "duration": 40,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p030",
+      "name": "Simran Kaur",
+      "user_email": "simran.kaur@example.com",
+      "join_time": "2026-05-26T10:00:10Z",
+      "leave_time": "2026-05-26T10:58:59Z",
+      "duration": 58,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p031",
+      "name": "Manav Khanna",
+      "user_email": "manav.khanna@example.com",
+      "join_time": "2026-05-26T10:21:12Z",
+      "leave_time": "2026-05-26T10:58:22Z",
+      "duration": 37,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p032",
+      "name": "Shreya Iyer",
+      "user_email": "shreya.iyer@example.com",
+      "join_time": "2026-05-26T10:00:34Z",
+      "leave_time": "2026-05-26T10:59:58Z",
+      "duration": 59,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p033",
+      "name": "Rajat Gupta",
+      "user_email": "rajat.gupta@example.com",
+      "join_time": "2026-05-26T10:16:54Z",
+      "leave_time": "2026-05-26T10:42:10Z",
+      "duration": 25,
+      "status": "left"
+    },
+
+    {
+      "id": "p034",
+      "name": "Khushi Jain",
+      "user_email": "khushi.jain@example.com",
+      "join_time": "2026-05-26T10:04:30Z",
+      "leave_time": "2026-05-26T10:57:45Z",
+      "duration": 53,
+      "status": "in_meeting"
+    },
+
+    {
+      "id": "p035",
+      "name": "Sarthak Tiwari",
+      "user_email": "sarthak.tiwari@example.com",
+      "join_time": "2026-05-26T10:00:01Z",
+      "leave_time": "2026-05-26T10:59:59Z",
+      "duration": 59,
+      "status": "in_meeting"
+    }
+  ]
+}

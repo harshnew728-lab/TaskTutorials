@@ -14,6 +14,7 @@ import {
   FiFolder,
   FiSearch
 } from "react-icons/fi";
+import SidebarButton from "../../components/SidebarButton/SidebarButton";
 
 function Notes() {
 
@@ -107,12 +108,11 @@ function Notes() {
 
         {/* TT LOGO */}
 
-        <img
-    src="https://tse1.mm.bing.net/th/id/OIP.qwylZspe0tt884RHXmhfWgHaHa?pid=Api&P=0&h=180"
+        <div className="sidebar-wrapper">
 
-          alt="TT Logo"
-          className="tt-logo"
-        />
+  <SidebarButton />
+
+</div>
 
         <h2>TASK TUTORIALS</h2>
 
