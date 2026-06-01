@@ -224,24 +224,28 @@ body{
 
 /* DIVIDER */
 
-.divider{
-
+.login-divider{
   margin-top:34px;
+
+  width:100%;
 
   display:flex;
   align-items:center;
+  justify-content:center;
 
   gap:12px;
+
+  color:var(--text-light);
 
   font-size:12px;
   font-weight:600;
 
-  color:var(--text-light);
+  text-transform:uppercase;
+  letter-spacing:0.08em;
 }
 
-.divider::before,
-.divider::after{
-
+.login-divider::before,
+.login-divider::after{
   content:"";
 
   flex:1;

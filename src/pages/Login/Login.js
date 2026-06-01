@@ -311,7 +311,7 @@ function Login() {
 
         {/* DIVIDER */}
 
-        <div className="divider">
+        <div className="login-divider">
 
           OR CONTINUE WITH
 
