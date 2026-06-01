@@ -1,0 +1,833 @@
+.academic-page {
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --surface: #f8fafc;
+--brand-50: #eef2ff;
+--brand-500: #6366f1;
+--brand-600: #4f46e5;
+--brand-700: #4338ca;
+  --gold: #fbbf24;
+  --gold-deep: #d97706;
+
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px 20px 50px;
+  background: var(--surface);
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+
+  color: var(--text-dark);
+}
+
+/* =========================================
+   DARK THEME OVERRIDES
+========================================= */
+body.dark-theme .academic-page {
+  --text-dark: #ffffff;
+  --text-light: #b5b5b5;
+  --card-bg: #1e1e1e;
+  --border-color: #2b2b2b;
+  --surface: #121212;
+--brand-50: #1e1b4b;
+--brand-600: #818cf8;
+--brand-700: #a5b4fc;
+}
+
+/* =====================
+   HALL OF FAME
+===================== */
+.hall-of-fame {
+  position: relative;
+  overflow: hidden;
+   padding: 28px 24px;
+  border-radius: 24px;
+  text-align: center;
+  color: white;
+background:
+  radial-gradient(
+    circle at top left,
+    rgba(255,255,255,.12),
+    transparent 35%
+  ),
+  radial-gradient(
+    circle at bottom right,
+    rgba(255,255,255,.08),
+    transparent 40%
+  ),
+  linear-gradient(
+    135deg,
+    #312e81 0%,
+    #4338ca 50%,
+    #6366f1 100%
+  );
+  box-shadow:
+  0 24px 50px -20px rgba(15, 23, 42, 0.45),
+  inset 0 1px 0 rgba(255,255,255,.15);
+}
+.hall-of-fame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  pointer-events: none;
+}
+.champion-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  filter: blur(100px);
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatGlow 9s ease-in-out infinite;
+}
+.champion-glow--alt {
+  top: auto;
+  bottom: -200px;
+  left: 80%;
+  width: 320px;
+  height: 320px;
+  background: rgba(129, 140, 248, 0.25);
+  animation-delay: -4s;
+}
+@keyframes floatGlow {
+  0%, 100% { transform: translate(-50%, 0) scale(1); }
+  50%      { transform: translate(-50%, 20px) scale(1.08); }
+}
+.hall-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hall-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hall-of-fame h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+  line-height: 1.1;
+
+  
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #e0e7ff 100%
+  );
+
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hall-subtitle {
+  max-width: 650px;
+  opacity: 0.9;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+/* Champion card */
+.champion-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 14px 18px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.08);
+
+  border: 1px solid rgba(255,255,255,.18);
+
+  backdrop-filter: blur(16px);
+
+  text-align: left;
+
+  max-width: 580px;
+  width: 100%;
+}
+.champion-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  padding: 4px;
+
+  background: linear-gradient(
+    135deg,
+    #fde68a,
+    #f59e0b,
+    #b45309
+  );
+
+  box-shadow:
+    0 10px 24px rgba(251,191,36,.35);
+
+  flex-shrink: 0;
+}
+.champion-meta { flex: 1; min-width: 0; }
+.champion-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #422006;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.champion-meta h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.champion-meta h3 {
+  font-weight: 500;
+  opacity: 0.75;
+  font-size: 10px;
+  margin-bottom: 18px;
+}
+.champion-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.champion-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.champion-stats small {
+  font-size: 11px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.champion-score {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+}
+.champion-score.gold {
+  color: #fde68a;
+}
+.divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* =====================
+   SECTION HEADERS
+===================== */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.015em;
+  position: relative;
+  padding-left: 14px;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--brand-500), var(--brand-700));
+}
+.section-sub {
+  color: var(--text-light);
+  font-size: 14px;
+  padding-left: 14px;
+}
+/* =====================
+   SUBJECT CHAMPIONS
+===================== */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px,1fr)
+  );
+  gap: 14px;
+}
+.subject-card {
+  position: relative;
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  text-align: center;
+
+  transition: .3s ease;
+
+  overflow: hidden;
+}
+.subject-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--brand-50), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.subject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px -15px rgba(99, 102, 241, 0.18);
+border-color: rgba(99, 102, 241, 0.25);
+}
+.subject-card:hover::before { opacity: 1; }
+.subject-card > * { position: relative; }
+.subject-icon {
+  font-size: 30px;
+
+  margin-bottom: 10px;
+
+  display: inline-flex;
+
+  width: 54px;
+  height: 54px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--brand-50),
+      #ffe4e4
+    );
+}
+.subject-card h4 {
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.subject-card h3 {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.subject-card span {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--brand-600);
+  letter-spacing: -0.01em;
+}
+/* =====================
+   TOP 10 WALL
+===================== */
+.top-ten-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(5,1fr);
+
+  gap:16px;
+}
+.scholar-card {
+  position: relative;
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 18px;
+
+  padding: 16px 12px;
+
+  text-align: center;
+
+  transition: .3s ease;
+}
+.scholar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 40px -18px rgba(15, 23, 42, 0.25);
+}
+.legend-card {
+  border: 1px solid rgba(251, 191, 36, 0.55);
+  background:
+    linear-gradient(180deg, rgba(254, 243, 199, 0.55), var(--card-bg) 70%);
+  box-shadow: 0 10px 30px -15px rgba(217, 119, 6, 0.35);
+}
+.legend-card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 22px;
+  padding: 1px;
+  background: linear-gradient(135deg, #fde68a, transparent 50%, #f59e0b);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.scholar-rank {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--brand-700);
+  background: var(--brand-50);
+  border-radius: 10px;
+}
+.legend-card .scholar-rank {
+  background: transparent;
+  color: inherit;
+  font-size: 22px;
+}
+.scholar-card img {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  margin: 4px auto 12px;
+
+  background: #f1f5f9;
+
+  border: 3px solid white;
+
+  box-shadow:
+    0 4px 12px rgba(15,23,42,.12);
+}
+.scholar-card h4 {
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.scholar-grade {
+  color: var(--text-light);
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+.scholar-gpa {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+}
+.scholar-gpa span {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--brand-600);
+  letter-spacing: -0.01em;
+}
+.scholar-gpa small {
+  font-size: 10px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+/* =====================
+   MY RANK
+===================== */
+.my-rank-card {
+  background: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 24px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 10px 25px -20px
+    rgba(15,23,42,.2);
+}
+.my-rank-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.my-rank-card h4 {
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.my-rank-card h1 {
+  font-size: 42px;
+  font-weight: 800;
+
+  margin: 6px 0 4px;
+
+  background: linear-gradient(
+    135deg,
+    var(--brand-500),
+    var(--brand-700)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+.my-rank-card p { color: var(--text-light); font-size: 14px; }
+.my-rank-meta {
+  display: flex;
+  gap: 12px;
+}
+.my-rank-meta > div {
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  min-width: 110px;
+}
+.my-rank-meta span {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+}
+.my-rank-meta small {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.progress-line {
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #eef2f7;
+  margin-bottom: 14px;
+}
+body.dark-theme .progress-line {
+  background: #2b2b2b;
+}
+.progress-fill {
+  width: 78%;
+  height: 100%;
+   background: linear-gradient(
+    90deg,
+    #4338ca,
+    #6366f1,
+    #818cf8
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3.5s linear infinite;
+  border-radius: inherit;
+}
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.progress-caption {
+  color: var(--text-dark);
+  font-size: 14px;
+}
+.progress-caption strong { color: var(--brand-600); }
+/* =====================
+   MOBILE
+===================== */
+
+  
+@media (max-width: 768px) {
+  .academic-page { padding: 16px 14px 60px; gap: 28px; }
+  .academic-page {
+    padding: 16px 14px 60px;
+    gap: 24px;
+  }
+
+  .hall-of-fame {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .hall-badge {
+    padding: 7px 14px;
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .hall-of-fame h1 {
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 4px;
+  }
+
+  .hall-subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  max-width: 420px;
+}
+
+  .champion-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 16px;
+  }
+
+  .champion-card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .champion-pill {
+    font-size: 10px;
+    padding: 4px 10px;
+    margin-bottom: 6px;
+  }
+
+  .champion-meta h2 {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+
+  .champion-meta h3 {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .champion-stats {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .champion-score {
+    font-size: 22px;
+  }
+
+  .subject-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .top-ten-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .scholar-card { padding: 20px 12px 16px; border-radius: 18px; }
+  .scholar-card img { width: 64px; height: 64px; }
+  .achievement-row { grid-template-columns: 1fr; }
+  .my-rank-card { padding: 22px; border-radius: 22px; }
+  .my-rank-card h1 { font-size: 44px; }
+  .my-rank-meta {
+     width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+ }
+  .my-rank-meta > div { flex: 1; min-width: 0; }
+}
+
+
+@media (max-width: 480px) {
+  .hall-of-fame {
+    padding: 16px 12px;
+    border-radius: 18px;
+  }
+
+  .hall-badge {
+    margin-bottom: 8px;
+  }
+
+  .hall-of-fame h1 {
+    font-size: 24px;
+  }
+
+ .hall-subtitle {
+  display: block;
+  font-size: 12px;
+  line-height: 1.45;
+  max-width: 280px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+  .champion-card {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .champion-card img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .champion-meta h2 {
+    font-size: 16px;
+  }
+
+  .champion-meta h3 {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .champion-score {
+    font-size: 20px;
+  }
+  .subject-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .subject-card {
+    padding: 12px 10px;
+    border-radius: 14px;
+  }
+  .subject-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .subject-card h4 {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  .subject-card h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .subject-card span {
+    font-size: 18px;
+  }
+  .top-ten-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .scholar-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 12px 16px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+  .scholar-card img {
+    margin: 0;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  }
+  .scholar-rank {
+    position: static;
+    min-width: 32px;
+    height: 32px;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .scholar-grade {
+    display: none;
+  }
+  .scholar-card h4 {
+    flex: 1;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .scholar-gpa {
+    padding: 4px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+  }
+  .scholar-gpa span {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .scholar-gpa small {
+    font-size: 8px;
+    font-weight: 600;
+  }
+  .my-rank-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+  .my-rank-head {
+    gap: 10px;
+  margin-bottom: 12px;
+  flex-direction: column;
+  }
+  .my-rank-card h1 {
+    font-size: 28px;
+  }
+  .my-rank-meta > div {
+    padding: 8px;
+    min-width: 0;
+  }
+  .my-rank-meta span {
+    font-size: 18px;
+  }
+}

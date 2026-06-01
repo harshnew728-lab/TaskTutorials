@@ -174,8 +174,8 @@ import Notes from "../pages/Notes/Notes";
 import Profile from "../pages/Profile/Profile";
 import Live from "../pages/Live/Live";
 
-import ActivityLeaderboard
-from "../pages/ActivityLeaderboard/ActivityLeaderboard";
+import Leaderboard
+from "../pages/Leaderboard/Leaderboard";
 
 import ProtectedRoute
   from "./ProtectedRoute";
@@ -305,7 +305,7 @@ function AppContent() {
 
           <ProtectedRoute>
 
-            <ActivityLeaderboard />
+             <Leaderboard />
 
           </ProtectedRoute>
 
