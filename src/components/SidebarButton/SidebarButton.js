@@ -65,9 +65,9 @@ const SidebarButton = () => {
 
         <div className="sidebar-top">
 
-          <h3>
-            Menu
-          </h3>
+          <h3 className="sidebar-logo">
+  Task<span>Tutorials</span>
+</h3>
 
           <button
             className="close-btn"
@@ -82,16 +82,38 @@ const SidebarButton = () => {
 
         </div>
 
-        <button
-          className="sidebar-link"
-          onClick={goToLeaderboard}
-        >
+       <button
+  className="sidebar-link"
+  onClick={goToLeaderboard}
+>
+  🏆 Leaderboard
+</button>
 
-          🏆 Leaderboard
+<button
+  className="sidebar-link"
+  onClick={() => {
+    navigate("/privacy-policy");
+    setOpen(false);
+  }}
+>
+  🔒 Privacy Policy
+</button>
 
-        </button>
+<button
+  className="sidebar-link"
+  onClick={() => {
+    navigate("/about");
+    setOpen(false);
+  }}
+>
+  ℹ️ About Us
+</button>
 
+<div className="sidebar-footer">
+  Learn. Build. Grow.
+</div>
       </div>
+      
 
     </>
 

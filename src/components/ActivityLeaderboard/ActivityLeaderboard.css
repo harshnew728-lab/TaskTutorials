@@ -33,8 +33,20 @@
     transform .35s ease,
     box-shadow .35s ease,
     border-color .35s ease;
+      opacity: 0;
+  animation: podiumReveal .7s ease forwards;
+}
 
-  animation:podiumReveal .7s ease backwards;
+@keyframes podiumReveal{
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+
+  /* animation:podiumReveal .7s ease backwards; */
 }
 
 .podium-card:nth-child(1){
