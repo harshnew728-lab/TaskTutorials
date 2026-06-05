@@ -168,7 +168,7 @@ function Login() {
           "Login Successful"
         );
 
-        navigate("/live");
+        navigate("/enrollment");
 
       } catch (error) {
 

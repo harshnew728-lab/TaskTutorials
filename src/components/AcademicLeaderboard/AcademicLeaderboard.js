@@ -158,6 +158,49 @@ const AcademicLeaderboard = () => {
         </div>
 
       </div>
+      {/* MY RANK */}
+
+      <div className="my-rank-card">
+
+        <div className="my-rank-head">
+
+          <div>
+
+            <h4>Your Position</h4>
+
+            <h1>#17</h1>
+
+            <p>
+              Only 2.3% away from entering Top 10
+            </p>
+
+          </div>
+
+          <div className="my-rank-meta">
+
+            <div>
+              <span>92%</span>
+              <small>Average</small>
+            </div>
+
+            <div>
+              <span>+4</span>
+              <small>This Week</small>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="progress-line">
+          <div className="progress-fill" />
+        </div>
+
+        <div className="progress-caption">
+          You are <strong>78%</strong> of the way to the Top 10.
+        </div>
+
+      </div>
 
       {/* TOP 10 */}
 
@@ -216,49 +259,7 @@ const AcademicLeaderboard = () => {
 
       </div>
 
-      {/* MY RANK */}
-
-      <div className="my-rank-card">
-
-        <div className="my-rank-head">
-
-          <div>
-
-            <h4>Your Position</h4>
-
-            <h1>#17</h1>
-
-            <p>
-              Only 2.3% away from entering Top 10
-            </p>
-
-          </div>
-
-          <div className="my-rank-meta">
-
-            <div>
-              <span>92%</span>
-              <small>Average</small>
-            </div>
-
-            <div>
-              <span>+4</span>
-              <small>This Week</small>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div className="progress-line">
-          <div className="progress-fill" />
-        </div>
-
-        <div className="progress-caption">
-          You are <strong>78%</strong> of the way to the Top 10.
-        </div>
-
-      </div>
+      
 
     </div>
   );

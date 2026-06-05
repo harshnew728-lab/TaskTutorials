@@ -173,6 +173,7 @@ import Recordings from "../pages/Recordings/Recordings";
 import Notes from "../pages/Notes/Notes";
 import Profile from "../pages/Profile/Profile";
 import Live from "../pages/Live/Live";
+import Enrollment from "../pages/Enrollment/Enrollment";
 
 import Leaderboard
 from "../pages/Leaderboard/Leaderboard";
@@ -311,6 +312,18 @@ function AppContent() {
 
         }
       />
+      <Route
+  path="/enrollment"
+  element={
+
+    <ProtectedRoute>
+
+      <Enrollment />
+
+    </ProtectedRoute>
+
+  }
+/>
 
     </Routes>
 

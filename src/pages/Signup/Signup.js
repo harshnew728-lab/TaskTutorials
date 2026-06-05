@@ -178,7 +178,7 @@ function Signup() {
           "Account Created Successfully"
         );
 
-        navigate("/live");
+        navigate("/enrollment");
 
       } catch (error) {
 
