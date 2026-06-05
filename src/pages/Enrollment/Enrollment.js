@@ -156,9 +156,9 @@ const isStep3Valid = Boolean(
             <span>{progress}%</span>
           </div>
 
-          <div className="progress-bar">
+          <div className="enrollment-progress-bar">
             <div
-              className="progress-fill"
+              className="enrollment-progress-fill"
               style={{
                 width: `${progress}%`
               }}
