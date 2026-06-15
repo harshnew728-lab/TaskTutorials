@@ -26,6 +26,10 @@ const SidebarButton = () => {
     setOpen(false);
 
   };
+  const goToDoubts = () => {
+  navigate("/doubts");
+  setOpen(false);
+};
 
   return (
 
@@ -88,7 +92,12 @@ const SidebarButton = () => {
 >
   🏆 Leaderboard
 </button>
-
+<button
+  className="sidebar-link"
+  onClick={goToDoubts}
+>
+  ❓ Doubts
+</button>
 <button
   className="sidebar-link"
   onClick={() => {
