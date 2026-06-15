@@ -1,0 +1,273 @@
+.similar-question-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1.4rem;
+  padding: 1.4rem;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.similar-question-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.similar-question-card.open {
+  border-color: var(--primary-color);
+}
+
+/* HEADER */
+
+.card-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 0;
+  margin-bottom: 1rem;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.45rem 0.8rem;
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.card-badge.success {
+  color: #16a34a;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.card-badge.info {
+  color: #2563eb;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.accordion-arrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--bg-color);
+  color: var(--text-dark);
+
+  transition: all 0.25s ease;
+}
+
+.similar-question-card.open .accordion-arrow {
+  background: var(--primary-color);
+  color: white;
+  transform: rotate(180deg);
+}
+
+/* QUESTION */
+
+.question-title {
+  margin: 0;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+
+  color: var(--text-dark);
+}
+
+.similar-question-card:hover .question-title {
+  color: var(--primary-color);
+}
+
+/* ACCORDION */
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.3s ease;
+}
+
+.similar-question-card.open .accordion-content {
+  max-height: 700px;
+}
+
+.answer-divider {
+  height: 1px;
+  background: var(--border-color);
+
+  margin: 1rem 0;
+}
+
+.answer-text {
+  margin: 0 0 1.25rem;
+
+  white-space: pre-line;
+
+  color: var(--text-light);
+  line-height: 1.75;
+  font-size: 0.92rem;
+}
+
+/* FEEDBACK */
+
+.feedback-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.feedback-question {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.feedback-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.feedback-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  padding: 0.45rem 0.85rem;
+
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.7rem;
+
+  color: var(--text-light);
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feedback-btn:hover {
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.feedback-btn.active.yes {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.08);
+  color: #16a34a;
+}
+
+.feedback-btn.active.no {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+}
+
+.thanks-message {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 0.75rem 0;
+
+  border-bottom: 1px solid
+    var(--border-color);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row strong {
+  color: var(--text-dark);
+  font-size: 0.85rem;
+  min-width: 70px;
+}
+
+.detail-row span {
+  color: var(--text-light);
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 1rem;
+}
+
+.card-footer span {
+  color: var(--primary-color);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.card-footer span:hover{
+  color:crimson;
+}
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .similar-question-card {
+    padding: 1rem;
+  }
+
+  .question-title {
+    font-size: 0.95rem;
+  }
+
+  .feedback-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

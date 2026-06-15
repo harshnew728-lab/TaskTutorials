@@ -174,9 +174,10 @@ import Notes from "../pages/Notes/Notes";
 import Profile from "../pages/Profile/Profile";
 import Live from "../pages/Live/Live";
 import Enrollment from "../pages/Enrollment/Enrollment";
-
+import Homework from "../pages/Homework/Homework";
 import Leaderboard
 from "../pages/Leaderboard/Leaderboard";
+import Doubts from "../pages/Doubts/Doubts";
 
 import ProtectedRoute
   from "./ProtectedRoute";
@@ -324,6 +325,31 @@ function AppContent() {
 
   }
 />
+
+<Route
+        path="/homework"
+        element={
+
+          <ProtectedRoute>
+
+            <Homework />
+
+          </ProtectedRoute>
+
+        }
+      />
+      <Route
+        path="/doubts"
+        element={
+
+          <ProtectedRoute>
+
+            <Doubts />
+
+          </ProtectedRoute>
+
+        }
+      />
 
     </Routes>
 

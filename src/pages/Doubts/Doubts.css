@@ -1,0 +1,690 @@
+:root {
+  --physics-color: #3b82f6;
+  --physics-bg: rgba(59, 130, 246, 0.08);
+
+  --chemistry-color: #10b981;
+  --chemistry-bg: rgba(16, 185, 129, 0.08);
+
+  --maths-color: #a855f7;
+  --maths-bg: rgba(168, 85, 247, 0.08);
+
+  --grad-primary: linear-gradient(
+    135deg,
+    rgb(255, 64, 0)
+  );
+
+  --grad-hover: linear-gradient(
+    135deg,
+    #ff7070db 0%,
+    #e066ffb0 100%
+  );
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.doubts-page {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-dark);
+  padding-bottom: 120px;
+  overflow-x: hidden;
+}
+
+.doubts-container {
+  width: min(92%, 840px);
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.top-header-glass {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--border-color);
+}
+
+body.dark-theme .top-header-glass {
+  background: rgba(18, 18, 18, 0.8);
+}
+
+body.dark-theme .subj-title {
+  color: #ffffff;
+}
+
+body.dark-theme .subj-icon-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+body.dark-theme .subject-card-button {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .subject-card-button:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.top-header-content {
+  max-width: 860px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.9rem 1.2rem;
+}
+
+.logo-title {
+  margin: 0;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sidebar-wrapper {
+  width: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-image {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid var(--border-color);
+}
+
+.active-pulse {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background: #22c55e;
+
+  border: 2px solid var(--card-bg);
+
+  animation: pulse-ring 1.8s infinite;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.doubt-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.55rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(255, 92, 92, 0.08);
+  border: 1px solid rgba(255, 92, 92, 0.15);
+
+  color: var(--primary-color);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  margin-bottom: 1.25rem;
+}
+
+.doubt-hero h1 {
+  margin-bottom: 1rem;
+
+  line-height: 1.15;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 850;
+}
+
+.gradient-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.doubt-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+
+  color: var(--text-light);
+
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   FORM CARD
+=========================== */
+
+.doubt-form-card {
+  background: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: 1.8rem;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.step-num {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 92, 92, 0.1);
+  color: var(--primary-color);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* ===========================
+   SUBJECTS
+=========================== */
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.subject-card-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  background: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.subject-card-button:hover {
+  transform: translateY(-2px);
+}
+
+.subj-icon-wrapper {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+}
+
+.subj-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.subj-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.subj-desc {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* PHYSICS */
+
+.subject-card-button.physics.active {
+  border-color: var(--physics-color);
+  background: var(--physics-bg);
+}
+
+.subject-card-button.physics.active .subj-icon-wrapper {
+  background: var(--physics-color);
+  border-color: var(--physics-color);
+  color: white;
+}
+
+/* CHEMISTRY */
+
+.subject-card-button.chemistry.active {
+  border-color: var(--chemistry-color);
+  background: var(--chemistry-bg);
+}
+
+.subject-card-button.chemistry.active .subj-icon-wrapper {
+  background: var(--chemistry-color);
+  border-color: var(--chemistry-color);
+  color: white;
+}
+
+/* MATHS */
+
+.subject-card-button.maths.active {
+  border-color: var(--maths-color);
+  background: var(--maths-bg);
+}
+
+.subject-card-button.maths.active .subj-icon-wrapper {
+  background: var(--maths-color);
+  border-color: var(--maths-color);
+  color: white;
+}
+
+/* ===========================
+   TOPICS
+=========================== */
+
+.topic-chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.topic-chip {
+  padding: 0.65rem 0.9rem;
+
+  border-radius: 999px;
+
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+
+  color: var(--text-dark);
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  white-space: nowrap;
+}
+.topic-chip:hover {
+  transform: translateY(-1px);
+}
+
+.topic-chip.active {
+  background: var(--text-dark);
+  border-color: var(--text-dark);
+  color: var(--card-bg);
+}
+
+/* ===========================
+   TEXTAREA
+=========================== */
+
+.textarea-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.char-count {
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+.limit-warning {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.textarea-container {
+  position: relative;
+}
+
+.textarea-container textarea {
+  width: 100%;
+  min-height: 180px;
+
+  resize: vertical;
+
+  padding: 1.2rem 3rem 1.2rem 1.2rem;
+
+  border-radius: 1.2rem;
+  border: 1px solid var(--border-color);
+
+  background: var(--bg-color);
+  color: var(--text-dark);
+
+  line-height: 1.7;
+  font-size: 0.95rem;
+
+  outline: none;
+
+  transition: all 0.25s ease;
+}
+
+.textarea-container textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(255, 92, 92, 0.08);
+}
+
+.textarea-clear {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-light);
+}
+
+.textarea-clear:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* ===========================
+   SEARCH BUTTON
+=========================== */
+
+.search-btn-gradient {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  border: none;
+  border-radius: 1rem;
+
+  background: var(--grad-primary);
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.search-btn-gradient:hover {
+  background: var(--grad-hover);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   TEACHER CTA
+=========================== */
+
+.teacher-cta-glass {
+  margin-top: 3rem;
+
+  padding: 2rem;
+
+  border-radius: 1.8rem;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid var(--border-color);
+}
+
+body.dark-theme .teacher-cta-glass {
+  background: rgba(20, 20, 20, 0.6);
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tutor-avatars-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.avatar-group {
+  display: flex;
+}
+
+.avatar-group img {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin-left: -10px;
+
+  border: 3px solid var(--card-bg);
+}
+
+.avatar-group img:first-child {
+  margin-left: 0;
+}
+
+.online-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.45rem 0.8rem;
+
+  border-radius: 999px;
+
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.cta-text-details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.cta-text-details p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.ask-tutor-btn {
+  height: 52px;
+
+  border: none;
+  border-radius: 1rem;
+
+  background: var(--text-dark);
+  color: var(--card-bg);
+
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0
+      rgba(34, 197, 94, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 6px
+      rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0
+      rgba(34, 197, 94, 0);
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+  .doubts-container {
+    padding: 1.5rem 0;
+  }
+
+  .doubt-form-card {
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+
+
+  .teacher-cta-glass {
+    padding: 1.25rem;
+  }
+
+  .cta-text-details h3 {
+    font-size: 1.15rem;
+  }
+
+  .topic-chip {
+    font-size: 0.8rem;
+  }
+
+  .subject-card-button {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+.subj-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.subj-desc {
+  display: none;
+}
+
+.subj-title {
+  font-size: 0.85rem;
+}
+.topic-chips-container {
+  gap: 0.5rem;
+}
+
+.topic-chip {
+  padding: 0.55rem 0.8rem;
+  font-size: 0.78rem;
+}
+}

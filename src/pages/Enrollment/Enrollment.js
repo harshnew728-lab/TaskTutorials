@@ -1,9 +1,10 @@
 import "./Enrollment.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Enrollment() {
   const [step, setStep] = useState(1);
-
+const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -97,6 +98,7 @@ function handleSubmit() {
   alert(
     "Enrollment Submitted Successfully 🎉"
   );
+  navigate("/live");
 }
 
   const progress =
